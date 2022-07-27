@@ -17,6 +17,7 @@ To run specific test suites you will need to annotate test accordinly then provi
 ```json
 $ mvn clean verify -Ddriver=chrome -Dcucumber.options="--tag @smoke"
 ```
+#### The test results will be recorded in the `target/site/serenity` directory.  Open index.html in browser of your choice
 
 ### Environment-specific configurations
 We can also configure environment-specific properties and options, so that the tests can be run in different environments.  There are many environment specific configurations that can be defined here. 
@@ -41,8 +42,6 @@ You use the `environment` system property to determine which environment to run 
 ```json
 $ mvn clean verify -Denvironment=staging
 ```
-
-#### The test results will be recorded in the `target/site/serenity` directory.  Open index.html in browser of your choice
 
 ### Webdriver configuration
 The WebDriver configuration is managed entirely from this file, as illustrated below:
