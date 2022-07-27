@@ -1,7 +1,7 @@
 
 ## Executing the tests
-IF RUNNING WITHIN IDE:   Open as a Maven project and execute Maven Goals mentioned below. Or you can execute test runner mentioned below.
-IF RUNNING FROM COMMAND LINE:  Ensure you have Maven installed locally amd follow directions below to execute from command line.
+IF RUNNING WITHIN IDE:   Open as a Maven project and execute Maven Goals mentioned below.
+IF RUNNING FROM COMMAND LINE:  Ensure you have Maven installed locally amd follow directions below to execute from command line.  You can download maven here https://maven.apache.org/download.cgi
 
 By default, the tests will run using Chrome and the `default` envirnoment specified in serenity.conf file in `environments` section  See below for more details.
 To run this Podium project, you can either just run the `CucumberTestSuite` test runner class located `src/test/java/podium/CucumberTestSuite.java`, or run 
@@ -23,7 +23,6 @@ We can also configure environment-specific properties and options, so that the t
 ```json
 environments {
 all {
-  api.base.uri = "https://demo.podium.tools/#{environment}-"
   home.page = "#{webdriver.base.url}"
 }
 default {
