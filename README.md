@@ -42,7 +42,7 @@ You use the `environment` system property to determine which environment to run 
 $ mvn clean verify -Denvironment=staging
 ```
 
-####The test results will be recorded in the `target/site/serenity` directory.  Open index.html in browser of your choice
+#### The test results will be recorded in the `target/site/serenity` directory.  Open index.html in browser of your choice
 
 ### Webdriver configuration
 The WebDriver configuration is managed entirely from this file, as illustrated below:
