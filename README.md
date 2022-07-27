@@ -58,7 +58,7 @@ chrome.switches="""--start-maximized;--test-type;--no-sandbox;--ignore-certifica
 
 ```
 
-###Bugs I am noticing
+### Bugs I am noticing
 Severe latency with the widget loading on the demo page.  Not sure if it is processes running on the weekdends
 in the `demo` environment or something else.  There is a TypeError with widget.js `Cannot read properties of 
 undefined (reading organizationScript)`
