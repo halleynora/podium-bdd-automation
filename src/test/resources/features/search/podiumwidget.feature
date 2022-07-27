@@ -41,6 +41,20 @@ Feature: Podium Widget Functional Tests
     Then assert validation message "Message is required" is displayed
     Then click wiget X close button
 
+  @regression @smoke
+  Scenario: Maximized Widget | Enter form data DONT SUBMIT
+    Given Podium widget page is loaded
+    And click widget on bottom right corner of page
+    Then assert widget is loaded
+    Then clear search input field
+    And search for 85018
+    Then assert 3 search results are displayed and clickable
+    And click on first search result
+    Then assert form is displayed
+    And enter Name Mobile and Message
+    Then assert validation checks marks are present to SUBMIT form
+    Then click wiget X close button
+
     @regression
   Scenario: Maximized Widget | Contact Form Page Layout
     Given Podium widget page is loaded

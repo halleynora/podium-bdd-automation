@@ -107,4 +107,14 @@ public class WidgetStepDefinitions {
     public void assertANewWebPageIsOpenedAndUrlIs(String url) {
         widgetActions.assertTermsOfUsePageLoads(url);
     }
+
+    @And("enter Name Mobile and Message")
+    public void enterNameMobileAndMessage() {
+        widgetActions.enterFormSubmissionDetails();
+    }
+
+    @Then("assert validation checks marks are present to SUBMIT form")
+    public void assertValidationChecksAreGreenToSUBMITForm() {
+        widgetActions.assertGreenChecksToSubmitForm();
+    }
 }

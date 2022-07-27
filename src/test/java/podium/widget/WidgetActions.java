@@ -130,4 +130,21 @@ public class WidgetActions extends UIInteractionSteps {
         getDriver().switchTo().window(parentWindow);
 
     }
+
+    public void enterFormSubmissionDetails() {
+        waitForCondition().withTimeout(duration).pollingEvery(pollingEvery).until(ExpectedConditions.visibilityOfElementLocated(WidgetLocators.CONTACT_FORM_NAME));
+
+        $(WidgetLocators.CONTACT_FORM_NAME).type("Only a test");
+        $(WidgetLocators.CONTACT_FORM_MOBILE).type("123456789");
+        $(WidgetLocators.CONTACT_FORM_MESSAGE).type("Testing message");
+    }
+
+    public void assertGreenChecksToSubmitForm() {
+        waitForCondition().withTimeout(duration).pollingEvery(pollingEvery).until(ExpectedConditions.visibilityOfElementLocated(WidgetLocators.NAME_VALIDATION_CHECK_MARK));
+
+        Assert.assertTrue($(WidgetLocators.NAME_VALIDATION_CHECK_MARK).isDisplayed());
+        Assert.assertTrue($(WidgetLocators.NAME_MOBILE_PHONE_CHECK_MARK).isDisplayed());
+
+
+    }
 }
